@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="adminUser"></div>
+      <div id="blockdiv" style="color: red"></div>
+
+      <div class="inbox">
+        <div class="inbox__people">
+          <h4>Active users</h4>
+        </div>
+        <div class="inbox__messages">
+          <div class="messages__history"></div>
+          <div class="fallback"></div>
+        </div>
+      </div>
+
+      <form class="message_form">
+        <input
+          type="text"
+          class="message_form__input"
+          placeholder="Type a message"
+        />
+        <button class="message_form__button" type="submit">Enter</button>
+      </form>
+      <div id="blockUser" style="display: none;">
+
+        <input
+          type="text"
+          class="blockInput"
+          placeholder="Type name to block ex- Userxxxxx"
+        />
+        <button class="blockButton" onclick="blockUser()">BLOCK</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- <script src="./socket.js"></script> -->
+    <script src="main.js"></script>
+  </body>
+</html>
